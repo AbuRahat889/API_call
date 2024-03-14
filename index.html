@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter </title>
+
+    <!-- daysiUi -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="container mx-auto">
+    <h1 class="text-5xl text-green-600 font-bold text-center mt-10">hello!! Phone Hunting</h1>
+    <main class="">
+        <!-- search option  -->
+        <section class="bg-gray-500 p-3 rounded-lg">
+            <input id="input-text" type="text" placeholder="Search" class="input input-bordered w-full max-w-xs" />
+            <button onclick="searchHandeler()" id="search-handeler" class="btn">Search</button>
+        </section>
+
+        <!-- search result -->
+        <section class="mt-10">
+            <!-- loadint spinner -->
+            <div id="loadint-container" class="text-center hidden">
+                <span class="loading loading-bars loading-lg"></span>
+            </div>
+
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
+                <!-- this is card section. we use card daynamic -->
+            </div>
+
+            <!-- show more button  -->
+            <div class="text-center">
+                <button id="show-more" class="btn btn-accent mt-8 hidden ">show-more</button>
+            </div>
+
+
+            <!-- show modal pop-up  -->
+            <div>
+                <!-- Open the modal using ID.showModal() method -->
+                <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                    <div class="modal-box">
+                        <div id="image-Show">
+
+                        </div>
+                        <h3 id="phone-name" class="font-bold text-lg"></h3>
+                        <p class="py-4">Press ESC key or click the button below to close</p>
+                        <div class="modal-action">
+                            <form method="dialog">
+                                if there is a button in form, it will close the modal
+                                <button class="btn">Close</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
+            </div>
+        </section>
+    </main>
+
+    <!-- script  -->
+    <script src="./phone.js"></script>
+</body>
+
+</html>
